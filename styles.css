@@ -45,7 +45,7 @@
     padding-left: 0;
 }
 
-.fa-gem{
+.fa-plug{
     margin-right: 0.5rem;
 }
 
@@ -74,30 +74,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 1rem;
-    width: 100%;
-}
-
-.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none ;
-    padding: 10px 20px;
+    text-decoration: none;
+    padding: 6px 5px;
     height: 100%;
     width: 100%;
     border: none;
     outline: none;
     border-radius: 4px;
-    background: #b12a5b;
+    background: #f77062;
     color: #fff;
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth transition for background and color */
+    box-sizing: border-box;
 }
 
-.button:hover {
-    background: #4837ff;
-    transition: all 0.3s ease;
+.navbar__btn:hover {
+    background: #4837ff; /* Only background color changes on hover */
 }
-
+    
 .navbar__links:hover{
     color: #f77062;
     transition: all 0.3s ease;
@@ -255,7 +248,9 @@
     transition: all 0.35s;
     outline: none;
     text-transform: uppercase; /* Uppercase text for emphasis */
+    text-decoration: none;
 }
+
 
 .main__btn a {
     position: relative;
@@ -393,6 +388,7 @@
     position: relative;
     color: #fff;
     padding: 20px; /* Add padding for spacing */
+    text-align: center; /* Align text to the center */
 }
 
 .services__card:nth-child(2){
@@ -418,7 +414,7 @@
 
 .services__card button {
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 20px; /* Ensure padding is set for all buttons */
     border: 2px solid #fff; /* Add a border for a cleaner look */
     border-radius: 4px;
     background: transparent; /* Set background to transparent */
@@ -600,7 +596,6 @@
 }
 
 /* about page */
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -630,7 +625,7 @@ html {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     background-color: transparent; /* Set background to transparent */
     color: #fff; /* Set text color to white for readability */
-    text-align: left; /* Align text to the left */
+    text-align: center; /* Align text to the center */
     border-radius: 10px; /* Add border-radius to make it less boxy */
     border: 1px solid #4837ff; /* Optional: Add a border for better visibility */
 }
@@ -659,7 +654,7 @@ html {
 .card-header {
     display: flex;
     flex-direction: column; /* Change to column to stack children vertically */
-    align-items: flex-start; /* Align items to the start of the flex container */
+    align-items: center; /* Align items to the start of the flex container */
     margin-bottom: 5px; /* Add margin for spacing */
     color: #fff
 }
@@ -676,17 +671,30 @@ html {
     font-size: 1.2rem;
 }
 
-.button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 0;
-    color: #000;
-    background-color: #fff;
-    text-align: center;
+.about-section .button {
+    font-size: 1rem;
+    background-color: #fff; /* Solid white background */
+    color: #000; /* Black text */
+    padding: 8px 10px; /* Reduced padding */
+    border: 2px solid #fff; /* Black border */
+    border-radius: 6px; /* Rounded corners */
+    margin-top: 2rem;
     cursor: pointer;
-    width: 100%;
+    transition: all 0.35s;
+    outline: none;
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    width: auto; /* Adjust width to content */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+    display: inline-block; /* Aligns button to text baseline */
+    text-align: center;
+    text-decoration: none;
 }
+
+.about-section .button:hover {
+    background-color: #000; /* Black background on hover */
+    color: #fff; /* White text on hover */
+}
+
 
 p {
     color: #fff;
@@ -694,11 +702,9 @@ p {
     margin-bottom: 20px; /* Ensure spacing after paragraphs */
 }
 
-.button:hover {
-    background-color: #555;
-}
 
-@media screen and (max-width: 650px) {
+
+@media screen and (max-width: 658px) {
     .column {
         width: 100%;
         display: block;
@@ -725,3 +731,4 @@ p {
 .product__item p {
     margin-top: 10px;
 }
+
